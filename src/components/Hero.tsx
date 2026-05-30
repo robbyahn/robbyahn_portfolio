@@ -12,8 +12,7 @@ export default function Hero() {
   const statsRef = useScrollAnimation(0.2);
 
   return (
-    <section className="hero-grid-cols relative min-h-screen grid grid-cols-[58%_42%] items-center px-12 py-36 pb-20 overflow-hidden">
-      {/* <div className="hero-grid absolute inset-0 pointer-events-none z-0" /> */}
+    <section className="hero-grid hero-grid-cols relative min-h-screen grid grid-cols-[58%_42%] items-center px-12 py-36 pb-20 overflow-hidden">
       <div ref={textRef} className="hero-text md:pr-20 z-10 fade-in">
         <p className="hero-eyebrow flex items-center gap-4 text-[0.68rem] tracking-[0.24em] uppercase text-accent-dim mb-7">
           Available for freelance
