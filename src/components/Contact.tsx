@@ -9,8 +9,7 @@ export default function Contact() {
   const linksRef = useScrollAnimation();
 
   return (
-    <section className="text-center px-12 py-40 relative overflow-hidden" id="contact">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[radial-gradient(ellipse,rgba(212,216,224,0.03)_0%,transparent_65%)] pointer-events-none z-0" />
+    <section className="contact text-center px-12 py-28 relative overflow-hidden" id="contact">
       <p
         ref={eyebrowRef}
         className="contact-eyebrow text-[0.65rem] tracking-[0.22em] uppercase text-muted mb-7 fade-in"
