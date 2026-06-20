@@ -22,11 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={atkinson.variable}>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var a=document.querySelectorAll('[style*="user-select"]');for(var i=0;i<a.length;i++)a[i].style.removeProperty("user-select")})()`,
-          }}
-        />
         {children}
       </body>
     </html>
