@@ -1,8 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border px-12 py-8 flex flex-col md:flex-row justify-between items-center text-[0.72rem] text-muted gap-2">
-      <span>© 2026 YourName — Frontend Developer</span>
-      <span>React · Next.js · TypeScript</span>
+    <footer className="border-t border-line py-8">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-sm text-ash font-mono">
+        <p>© 2026 Robby Ahn</p>
+        <p>Built with Tailwind · Atkinson Hyperlegible</p>
+      </div>
     </footer>
   );
 }

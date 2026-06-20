@@ -1,96 +1,50 @@
 "use client";
 
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Developer",
-    company: "Company Name · Full-time",
+    period: "2019 — Present",
+    role: "Senior Web Developer",
+    company: "Full-time",
     bullets: [
-      "Led migration of legacy React app to Next.js 14, reducing TTI by 40%",
-      "Built reusable component library used across 3 product lines",
-      "Mentored 2 junior developers and conducted weekly code reviews",
+      "Lead frontend work on enterprise and government web platforms. SilverStripe CMS, React/Next.js, accessibility compliance, and performance.",
     ],
   },
   {
-    period: "2020 — 2022",
+    period: "2015 — 2019",
+    role: "Web Developer",
+    company: "Full-time",
+    bullets: [
+      "Full-stack development across CMS platforms and custom PHP applications. Built responsive, standards-compliant interfaces.",
+    ],
+  },
+  {
+    period: "Earlier",
     role: "Frontend Developer",
-    company: "Previous Company · Full-time",
+    company: "Full-time",
     bullets: [
-      "Developed responsive SPA for 50k+ monthly active users",
-      "Implemented A/B testing infrastructure, improving conversion by 18%",
-      "Collaborated with designers and backend team in agile sprints",
-    ],
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "Startup · Full-time",
-    bullets: [
-      "Built marketing landing pages with React and GSAP animations",
-      "Integrated third-party APIs: Stripe, Twilio, SendGrid",
+      "Foundations in HTML, CSS, JavaScript and the craft of clean, maintainable markup.",
     ],
   },
 ];
 
-function ExpItem({
-  exp,
-  index,
-}: {
-  exp: (typeof experiences)[number];
-  index: number;
-}) {
-  const ref = useScrollAnimation();
-
+export default function Experience() {
   return (
-    <div
-      ref={ref}
-      className="exp-item bg-surface grid grid-cols-1 md:grid-cols-[150px_1fr] gap-3 md:gap-12 px-10 py-10 transition-colors duration-300 hover:bg-card-hover"
-      style={{ transitionDelay: `${index * 0.1}s` }}
-    >
-      <div className="exp-period text-[0.72rem] tracking-[0.1em] text-accent-dim pt-1">
-        {exp.period}
-      </div>
-      <div>
-        <div className="exp-role font-serif text-[1.2rem] font-light mb-1 text-content">
-          {exp.role}
+    <section id="experience" className="border-t border-line py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-baseline gap-4 mb-12">
+          <span className="font-mono text-accent text-sm">03</span>
+          <h2 className="text-3xl font-bold text-white">Experience</h2>
         </div>
-        <div className="exp-company text-[0.78rem] text-muted tracking-wide mb-4">
-          {exp.company}
-        </div>
-        <ul className="exp-bullets flex flex-col gap-[0.45rem] list-none">
-          {exp.bullets.map((bullet) => (
-            <li
-              key={bullet}
-              className="text-sm text-muted pl-5 relative leading-relaxed before:content-['–'] before:absolute before:left-0 before:text-accent-dim"
-            >
-              {bullet}
+        <ol className="relative border-l border-line ml-2">
+          {experiences.map((exp) => (
+            <li key={exp.period} className="ml-8 pb-12 last:pb-0">
+              <span className="absolute -left-[7px] mt-1.5 w-3 h-3 rounded-full bg-accent"></span>
+              <p className="font-mono text-xs text-ash">{exp.period}</p>
+              <h3 className="text-lg font-bold text-white mt-1">{exp.role}</h3>
+              <p className="text-ash mt-2 max-w-2xl">{exp.bullets[0]}</p>
             </li>
           ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-export default function Experience() {
-  const headerRef = useScrollAnimation();
-
-  return (
-    <section className="bg-surface px-12 py-28" id="experience">
-      <div ref={headerRef} className="section-header mb-16 fade-in">
-        <p className="section-num text-[0.65rem] tracking-[0.22em] uppercase text-muted mb-4">
-          03 — Background
-        </p>
-        <h2 className="font-serif text-[clamp(1.9rem,3.5vw,3rem)] font-light leading-tight">
-          Work <em className="gradient-text not-italic">Experience</em>
-        </h2>
-      </div>
-      <div className="exp-list flex flex-col gap-px bg-border border border-border">
-        {experiences.map((exp, i) => (
-          <ExpItem key={exp.period} exp={exp} index={i} />
-        ))}
+        </ol>
       </div>
     </section>
   );

@@ -11,13 +11,9 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <div className="h-px bg-border" />
       <Skills />
-      <div className="h-px bg-border" />
       <Projects />
-      <div className="h-px bg-border" />
       <Experience />
-      <div className="h-px bg-border" />
       <Contact />
       <Footer />
     </>
